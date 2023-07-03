@@ -8,25 +8,23 @@ Nordlys arkitekturen representerer den strategiske designstien og måltilstanden
 
 Det er viktig å merke seg at ikke alle bedrifter adopterer Azure på samme måte, og derfor kan Nordlys arkitekturen variere mellom kunder. Til syvende og sist kan de tekniske hensynene og designanbefalingene som presenteres i denne veiledningen føre til ulike avveininger basert på kundens scenario. En viss variasjon er derfor forventet, men ved å følge de sentrale anbefalingene vil resulterende målarkitektur posisjonere kunden på en vei mot bærekraftig skala.
 
-## Definisjon av Landing Zones
+## Definisjon av landingsoner ("Landing Zones")
 
-Innenfor rammen av Nordlys arkitekturen er en "Landing Zone" en logisk konstruksjon som fanger opp alt som må være sant for å muliggjøre applikasjonsmigrasjoner og -utvikling i et bedriftsmessig omfang i Azure. Den tar hensyn til alle plattformressurser som kreves for å støtte kundens applikasjonsportefølje og skiller ikke mellom IaaS eller PaaS.
+Innenfor rammen av Nordlys arkitekturen for Azure er en landingsone en logisk konstruksjon som fanger opp alt som må være sant for å muliggjøre applikasjonsmigrasjoner og -utvikling i et bedriftsmessig omfang i Azure. Den tar hensyn til alle plattformressurser som kreves for å støtte kundens applikasjonsportefølje og skiller ikke mellom IaaS eller PaaS.
 
 Hver stor bedrifts programvareportefølje vil omfatte en myriade av applikasjonsarketyper, og hver Landing Zone representerer i hovedsak de felles elementene, som nettverk og IAM, som deles på tvers av forekomster av disse arketyper og som må være på plass for å sikre at migrerte applikasjoner har tilgang til nødvendige komponenter ved distribusjon. Hver Landing Zone må derfor utformes og implementeres i samsvar med kravene til arketyper innenfor kundens applikasjonsportefølje.
 
-Hovedformålet med "Landing Zones" er derfor å sikre at når en applikasjon lander på Azure, er den nødvendige "infrastrukturen" allerede på plass, noe som gir større smidighet og overholdelse av bedriftens sikkerhets- og styringskrav.
+Hovedformålet med landingsonder er derfor å sikre at når en applikasjon lander på Azure, er den nødvendige "infrastrukturen" allerede på plass, noe som gir større smidighet og overholdelse av bedriftens sikkerhets- og styringskrav.
 
 ---
 
-_Ved hjelp av en analogi, kan dette sammenlignes med hvordan byinfrastruktur som v
-
-ann, gass og elektrisitet er tilgjengelig før nye hus blir konstruert. I denne sammenhengen er nettverk, IAM, retningslinjer, styring og overvåking felles "infrastruktur" tjenester som må være tilgjengelige for å effektivisere prosessen med applikasjonsmigrasjon._
+_Ved hjelp av en analogi, kan dette sammenlignes med hvordan byinfrastruktur som vann, avløp og elektrisitet er tilgjengelig før nye hus blir konstruert. I denne sammenhengen er nettverk, IAM, retningslinjer, styring og overvåking felles "infrastruktur" tjenester som må være tilgjengelige for å effektivisere prosessen med applikasjonsmigrasjon._
 
 ---
 
 # Designprinsipper
 
-Nordlys arkitekturen bygger på [fem designprinsipper](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) som fungerer som et kompass for påfølgende designbeslutninger på viktige tekniske områder. Lesere og brukere av referanseimplementasjonen oppfordres sterkt til å sette seg inn i disse prinsippene for å bedre forstå deres innvirkning og de avveininger som følger av manglende overholdelse.
+Nordlys arkitekturen for Azure bygger på [fem designprinsipper](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) som fungerer som et kompass for påfølgende designbeslutninger på viktige tekniske områder. Lesere og brukere av referanseimplementasjonen oppfordres sterkt til å sette seg inn i disse prinsippene for å bedre forstå deres innvirkning og de avveininger som følger av manglende overholdelse.
 
 * [Demokratisering av abonnementer](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles?branch#subscription-democratization)
 * [Policydrevet styring](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance)
@@ -42,9 +40,7 @@ Ved kjernen av Nordlys arkitekturen ligger en kritisk designsti som består av g
 
 De [åtte kritiske designområdene](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas) er ment å støtte oversettelsen av kundekrav til Azure-strukturer og -funksjonalitet, for å takle misforholdet mellom lokal infrastruktur og skydesign, som typisk skaper uoverensstemmelser og friksjon med hensyn til Nordlys arkitekturen og Azure-adoptering.
 
-Beslutninger tatt innenfor disse kritiske områdene vil ha konsekvenser for hele Nordlys arkitekturen og påvirke andre beslutninger. Lesere
-
- og brukere av referanseimplementasjonen oppfordres sterkt til å sette seg inn i disse åtte områdene for å bedre forstå konsekvensene av de beslutningene som tas, og som senere kan medføre avveininger innenfor relaterte områder.
+Beslutninger tatt innenfor disse kritiske områdene vil ha konsekvenser for hele Nordlys arkitekturen og påvirke andre beslutninger. Lesere og brukere av referanseimplementasjonen oppfordres sterkt til å sette seg inn i disse åtte områdene for å bedre forstå konsekvensene av de beslutningene som tas, og som senere kan medføre avveininger innenfor relaterte områder.
 
 * [Fakturering og Active Directory-leietakere](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant)
 * [Identitet og tilgangsstyring](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access)
