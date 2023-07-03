@@ -1,4 +1,4 @@
-# Nordlys arkitekturen - Referanseimplementering
+# Nordlys arkitekturen for Azure - Referanseimplementasjon
 
 [![Gjennomsnittlig tid for å løse et problem](http://isitmaintained.com/badge/resolution/azure/enterprise-scale.svg)](http://isitmaintained.com/project/azure/enterprise-scale "Gjennomsnittlig tid for å løse et problem")
 [![Andel åpne problemer](http://isitmaintained.com/badge/open/azure/enterprise-scale.svg)](http://isitmaintained.com/project/azure/enterprise-scale "Andel åpne problemer")
