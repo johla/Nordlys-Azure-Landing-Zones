@@ -1,3 +1,3 @@
-# This page has moved to our Wiki
+# Denne siden har blitt flyttet til vår Wiki
 
-Please refer to [Contribution Guide](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Contribution)
+Vennligst se på [Bidragsveiledningen](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Contribution-no) for mer informasjon.
