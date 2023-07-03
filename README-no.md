@@ -5,7 +5,7 @@
 
 ## Brukerdokumentasjon
 
-For å få mer informasjon om Azure landingssone-referanseimplementeringen, kan du se [dokumentasjonen på vårt Wiki](https://github.com/Azure/Enterprise-Scale/wiki).
+For å få mer informasjon om Azure landingssone-referanseimplementeringen, kan du se [dokumentasjonen på vår Wiki](https://github.com/Azure/Enterprise-Scale/wiki).
 
 ---
 
