@@ -1,4 +1,4 @@
-# Nordlys arkitekturen
+# Nordlys arkitekturen for Azure
 
 De viktigste utfordringene for bedriftskunder som tar i bruk Azure er 1) hvordan man kan tillate sømløs migrasjon av applikasjoner (gamle eller moderne) i sitt eget tempo, og 2) hvordan man kan tilby sikre og effektive drifts-, styrings- og styringsoppgaver på tvers av hele plattformen og alle omfattede applikasjoner. For å takle disse utfordringene krever kundene en fremtidsrettet og Azure-tilpasset designtilnærming, som i denne veiledningen representeres av Nordlys arkitekturen.
 
