@@ -11,9 +11,9 @@ For å få mer informasjon om Azure landingssone-referanseimplementeringen, kan 
 
 ## Mål
 
-Nordlys arkitekturen gir forhåndsdefinert veiledning kombinert med Azure beste praksis, og den følger designprinsipper på tvers av viktige designområder, slik at organisasjoner kan definere sin Azure-arkitektur. Den vil fortsette å utvikle seg i takt med Azure-plattformen og blir til slutt definert av de ulike designavgjørelsene organisasjoner må ta for å definere sin Azure-reise.
+Nordlys arkitekturen for Azure landingsoner gir forhåndsdefinert veiledning kombinert med Azure beste praksis, og den følger designprinsipper på tvers av viktige designområder, slik at organisasjoner kan definere sin Azure-arkitektur. Den vil fortsette å utvikle seg i takt med Azure-plattformen og blir til slutt definert av de ulike designavgjørelsene organisasjoner må ta for å definere sin Azure-reise.
 
-Nordlys arkitekturen er modulær i designet og lar organisasjoner starte med grunnleggende landingssoner som støtter deres applikasjonsportefølje. Arkitekturen gjør det mulig for organisasjoner å starte så lite som nødvendig og skaleres i takt med deres forretningsbehov, uavhengig av skaleringspunkt.
+Nordlys arkitekturen for Azure landingsoner er modulær i designet og lar organisasjoner starte med grunnleggende landingssoner som støtter deres applikasjonsportefølje. Arkitekturen gjør det mulig for organisasjoner å starte så lite som nødvendig og skaleres i takt med deres forretningsbehov, uavhengig av skaleringspunkt.
 
 ![Animert bilde som viser modulariteten til Azure landingssoner](./docs/wiki/media/ESLZ.gif)
 
