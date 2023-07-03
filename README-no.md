@@ -1,78 +1,54 @@
-# Enterprise-Scale - Reference Implementation
+# Nordlys arkitekturen - Referanseimplementering
 
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/azure/enterprise-scale.svg)](http://isitmaintained.com/project/azure/enterprise-scale "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/azure/enterprise-scale.svg)](http://isitmaintained.com/project/azure/enterprise-scale "Percentage of issues still open")
+[![Gjennomsnittlig tid for å løse et problem](http://isitmaintained.com/badge/resolution/azure/enterprise-scale.svg)](http://isitmaintained.com/project/azure/enterprise-scale "Gjennomsnittlig tid for å løse et problem")
+[![Andel åpne problemer](http://isitmaintained.com/badge/open/azure/enterprise-scale.svg)](http://isitmaintained.com/project/azure/enterprise-scale "Andel åpne problemer")
 
-## User documentation
+## Brukerdokumentasjon
 
-To find out more about the Azure landing zones reference implementation, please refer to the [documentation on our Wiki](https://github.com/Azure/Enterprise-Scale/wiki)
-
----
-
-## Objective
-
-The Enterprise-Scale architecture provides prescriptive guidance coupled with Azure best practices, and it follows design principles across the critical design areas for organizations to define their Azure architecture. It will continue to evolve alongside the Azure platform and is ultimately defined by the various design decisions that organizations must make to define their Azure journey.
-
-The Enterprise-Scale architecture is modular by design and allows organizations to start with foundational landing zones that support their application portfolios, and the architecture enables organizations to start as small as needed and scale alongside their business requirements regardless of scale point.
-
-![Animated image showing the modularity of Azure landing zones](./docs/wiki/media/ESLZ.gif)
+For å få mer informasjon om Azure landingssone-referanseimplementeringen, kan du se [dokumentasjonen på vårt Wiki](https://github.com/Azure/Enterprise-Scale/wiki).
 
 ---
 
-_The Enterprise-Scale architecture represents the strategic design path and target technical state for your Azure environment._
+## Mål
+
+Nordlys arkitekturen gir forhåndsdefinert veiledning kombinert med Azure beste praksis, og den følger designprinsipper på tvers av viktige designområder, slik at organisasjoner kan definere sin Azure-arkitektur. Den vil fortsette å utvikle seg i takt med Azure-plattformen og blir til slutt definert av de ulike designavgjørelsene organisasjoner må ta for å definere sin Azure-reise.
+
+Nordlys arkitekturen er modulær i designet og lar organisasjoner starte med grunnleggende landingssoner som støtter deres applikasjonsportefølje. Arkitekturen gjør det mulig for organisasjoner å starte så lite som nødvendig og skaleres i takt med deres forretningsbehov, uavhengig av skaleringspunkt.
+
+![Animert bilde som viser modulariteten til Azure landingssoner](./docs/wiki/media/ESLZ.gif)
 
 ---
 
-Not all enterprises adopt Azure in the same way, so the Enterprise-Scale architecture may vary between customers. Ultimately, the technical considerations and design recommendations of the Enterprise-Scale architecture may lead to different trade-offs based on the customer's scenario. Some variation is expected, but if core recommendations are followed, the resulting target architecture will put the customer on a path to sustainable scale.
+_Nordlys arkitekturen representerer den strategiske designveien og målrettet teknisk tilstand for Azure-miljøet ditt._
 
-The Enterprise-Scale reference implementations in this repository are intended to support Enterprise-Scale Azure adoption and provides prescriptive guidance based on authoritative design for the Azure platform as a whole.
+---
 
-| Key customer landing zone requirement | Enterprise-Scale reference implementations |
-|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Timelines to reach security and compliance requirements for a workload | Enabling all recommendations during setup, will ensure resources are compliant from a monitoring and security perspective |
-| Provides a baseline architecture using multi-subscription design | Yes, for the entire Azure tenant regardless of customer’s scale-point |
-| Best-practices from cloud provider | Yes, proven and validated with customers |
-| Be aligned with cloud provider’s platform roadmap | Yes |
-| UI Experience and simplified setup | Yes, Azure portal |
-| All critical services are present and properly configured according to recommend best practices for identity & access management, governance, security, network and logging | Yes, using a multi-subscription design, aligned with Azure platform roadmap |
-| Automation capabilities (IaC/DevOps) | Yes: ARM, Policy, Bicep and Terraform Modules |
-| Provides long-term self-sufficiency | Yes, enterprise-scale architecture -> 1:N landing zones. Approach & architecture prepare the customer for long-term self-sufficiency, the RIs are there to get you started |
-| Enables migration velocity across the organization | Yes, enterprise-scale architecture -> 1:N landing zones, Architecture includes designs for segmentation and separation of duty to empower teams to act within appropriate landing zones |
-| Achieves operational excellence | Yes. Enables autonomy for platform and application teams with a policy driven governance and management |
+Ikke alle virksomheter tar i bruk Azure på samme måte, så Nordlys arkitekturen kan variere mellom kunder. De tekniske vurderingene og designanbefalingene i Nordlys arkitekturen kan til slutt føre til forskjellige avveininger basert på kundens scenario. Variasjon er forventet, men hvis de grunnleggende anbefalingene følges, vil den resulterende målarkitekturen legge kunden på vei mot bærekraftig skala.
 
-## Conditions for success
+Referanseimplementeringene av Nordlys arkitekturen i dette repository er ment å støtte Azure-adoptering på bedriftsnivå og gir forhåndsdefinert veiledning basert på autoritativt design for hele Azure-plattformen.
 
-To fully leverage this reference implementation in this repository, readers must have a collaborative engagement with key customer stakeholders across critical technical domains, such as identity, security, and networking. Ultimately, the success of cloud adoption hinges on cross-discipline cooperation within the organization, since key requisite Enterprise-Scale design decisions are cross cutting, and to be authoritative must involve domain Subject Matter Expertise (SME) and stakeholders within the customer. It is crucial that the organization has defined their [Enterprise-Scale Architecture](./docs/EnterpriseScale-Architecture.md) following the design principles and critical design areas.
+| Viktig kundekrav for landingssone | Referanseimplementeringer for Nordlys arkitekturen |
+|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Tidsplan for å oppfylle sikkerhets- og overholdelseskrav for en arbeidsbelastning | Å aktivere alle anbefalinger under oppsettet vil sikre at ressursene er i samsvar med overvåkings- og sikkerhetsperspektivet |
+| Gir en grunnleggende arkitektur ved hjelp av flersubskripsjonsdesign | Ja, for hele Azure-mandanten uavhengig av kundens skaleringspunkt |
+| Beste praksis fra skytilbyderen | Ja, bevist og validert med kunder |
+| Er i tråd med skytilbyderens plattformplan | Ja |
+| Brukervennlig opplevelse og forenklet oppsett | Ja, Azure Portal |
+| Alle viktige tjenester er til stede og konfigurert i samsvar med anbefalte beste praksiser for identitets- og tilgangsstyring, styring, sikkerhet, nettverk og logging | Ja, ved bruk av flersubskripsjonsdesign i tråd med Azure-plattformplanen |
+| Automatiseringsfunksjoner (IaC/DevOps) | Ja: ARM, Policy, Bicep og Terraform-moduler |
+| Gir langsiktig selvforsyningsevne | Ja, Nordlys arkitekturen -> 1:N landingssoner. Tilnærmingen og arkitekturen forbereder kunden på langsiktig selvforsyning, og referanseimplementeringene er der for å hjelpe deg i gang |
+| Muliggjør migrasjonshastighet på tvers av organisasjonen | Ja, Nordlys arkitekturen -> 1:N landingssoner. Arkitekturen inkluderer design for segmentering og ansvarsseparasjon for å gi teamene muligheten til å handle innenfor passende landingssoner |
+| Oppnår driftsmessig utmerkelse | Ja. Gir autonomi for plattform- og applikasjonsteamene med en policydrevet styring og ledelse |
 
-It is also assumed that readers have a broad understanding of key Azure constructs and services in order to fully contextualize the prescriptive recommendations contained within Enterprise-Scale.
+## Suksesskriterier
+
+For å utnytte denne referanseimplementasjonen fullt ut, må leserne samarbeide tett med sentrale interessenter hos kunden innen viktige tekniske områder, som identitet, sikkerhet og nettverk. Suksessen med å ta i bruk skyen avhenger i stor grad av tverrfaglig samarbeid innen organisasjonen, ettersom nødvendige designavgjørelser på bedriftsnivå krysser flere områder og må involvere eksperter (Subject Matter Expertise) og interessenter innenfor kundens domene. Det er avgjørende at organisasjonen har definert sin [Nordlys arkitektur](./docs/EnterpriseScale-Architecture-no.md) i tråd med designprinsippene og de viktige designområdene.
+
+Det antas også at leserne har en bred forståelse av nøkkelbegreper og tjenester i Azure for å fullt ut kontekstualisere de anbefalte retningslinjene som er inkludert i Nordlys arkitekturen.
 <!--
-![Enterprise-Scale ](./docs/wiki/media/ES-process.png)
+![Nordlys arkitektur](./docs/wiki/media/ES-process.png)
 -->
 
-## Deploying Enterprise-Scale Architecture in your own environment
+## Driftsetting av Nordlys arkitekturen i ditt eget miljø
 
-The Enterprise-Scale architecture is modular by design and allows customers to start with foundational Landing Zones that support their application portfolios, regardless of whether the applications are being migrated or are newly developed and deployed to Azure. The architecture can scale alongside the customer's business requirements regardless of scale point. In this repository we are providing the following five templates representing different scenarios composed using ARM templates.
-
-| Reference implementation | Description | ARM Template | Link |
-|:-------------------------|:-------------|:-------------|------|
-| Contoso | On-premises connectivity using Azure vWAN |[![Deploy To Azure](https://learn.microsoft.com/en-us/azure/templates/media/deploy-to-azure.svg)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json) | [Detailed description](./docs/reference/contoso/Readme.md) |
-| AdventureWorks | On-premises connectivity with Hub & Spoke  |[![Deploy To Azure](https://learn.microsoft.com/en-us/azure/templates/media/deploy-to-azure.svg)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json) | [Detailed description](./docs/reference/adventureworks/README.md) |
-| WingTip | Azure without hybrid connectivity |[![Deploy To Azure](https://learn.microsoft.com/en-us/azure/templates/media/deploy-to-azure.svg)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json) | [Detailed description](./docs/reference/wingtip/README.md) |
-| Trey Research | On-premises connectivity with Hub and Spoke for small Enterprises | [![Deploy To Azure](https://learn.microsoft.com/en-us/azure/templates/media/deploy-to-azure.svg)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Ftreyresearch%2FarmTemplates%2Fes-lite.json/createUIDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Ftreyresearch%2FarmTemplates%2Fportal-es-lite.json) | [Detailed description](./docs/reference/treyresearch/README.md) |
-| Azure Gov | Reference implementation that can be deployed to Azure gov and includes all options in a converged experience | [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.svg?sanitize=true)](https://portal.azure.us/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Ffairfaxeslz-portal.json) | N/A
-
-> The Bicep version is now available in Public Preview here: [https://github.com/Azure/ALZ-Bicep](https://github.com/Azure/ALZ-Bicep)
-
-## Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit [Contributor License Agreement (CLA)](https://cla.opensource.microsoft.com).
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Nordlys arkitekturen er modulær i designet og gjør det mulig for kunder å starte med grunnleggende landingssoner som støtter deres applikasjonsporteføl
